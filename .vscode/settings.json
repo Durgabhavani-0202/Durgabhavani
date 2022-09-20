@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "D:\\python3.10\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.condaPath":"D:\\pacakges\\Scripts\\conda.exe",
+
+}

@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Sep 10 12:32:02 2022
+
+@author: user
+"""
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2 style="color:blue;">Restaurent Review Analysis</h2>
+		
+	</div>
+	</header>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:green;">positive review</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:red;">Negative review</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>

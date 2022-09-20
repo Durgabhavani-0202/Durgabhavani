@@ -1,0 +1,22 @@
+for col in data.columns.values:
+    if data[col].dtype == 'int64':
+        continue
+    else:
+        data[col] = pd.get_dummies(data[col], drop_first = True)
+
+
+data[['Surname']]=pd.get_dummies(data['Surname'], drop_first = True)
+ pd.get_dummies(data,columns= col, drop_first = True)
+
+rf_predict_test1 = best_rf_estimator1.predict(X_test1)
+accuracy_score(y_test1, rf_predict_test1)
+print(classification_report(y_test1, rf_predict_test1))
+
+
+@app.route('/predict_api',methods=['POST'])
+def retent_api():
+    data = request.get_json(force=True)
+    retention = model.predict([np.array(list(data.values()))])
+
+    output = retention[0]
+    return jsonify(output)
